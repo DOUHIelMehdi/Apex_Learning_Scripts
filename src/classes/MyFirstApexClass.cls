@@ -10,8 +10,14 @@ public with sharing class MyFirstApexClass {
 
     public void printGreeting(){
         System.debug(greeting);
+        // test for this method = create an object instance then call the methods
     }
-    //
+    public Double calculateDiscountedPrice(Decimal originalPrice , Decimal discountedPercentage){
+        Decimal discountValue = originalPrice * (discountedPercentage / 100);
+        Decimal finalPrize = originalPrice - discountValue;
+        return finalPrize;
+    }
+
 
 
 }
