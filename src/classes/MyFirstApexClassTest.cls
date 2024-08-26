@@ -20,10 +20,48 @@ private class MyFirstApexClassTest {
     @IsTest
     static void testCalculatedDiscountPrice() {
         // Steps: 1- Create new instance, 2- Call method to test, 3- Use assertions to validate result
+        // first test : typical values
         MyFirstApexClass myClass = new MyFirstApexClass();
         Decimal result = myClass.calculateDiscountedPrice(200.0, 15.0);
         System.assertEquals(170.0, result, 'The discounted price should be 80.0');
     }
+    @IsTest
+    static void testCalculateDiscountZero(){
+        //discount is 0%
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        Decimal result = myClass.calculateDiscountedPrice(200.0, 0.0);
+        System.assertEquals(200.0, result, 'The discounted price should be 200.0');
+    }
+    @IsTest
+    static void testCalculateDiscountFull(){
+        //discount is 100%
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        Decimal result = myClass.calculateDiscountedPrice(200.0, 100.0);
+        System.assertEquals(0.0, result, 'The discounted price should be 00.0');
+    }
+    @IsTest
+    static void testCalculateDiscountNegative(){
+        //discount is negative
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        Decimal result = myClass.calculateDiscountedPrice(200.0, -10.0);
+        System.assertEquals(220.0, result, 'The discounted is negative so you ll add money');
+    }
+    @IsTest
+    static void testCalculateDiscountgreater100(){
+        //discount is greter then 100%
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        Decimal result = myClass.calculateDiscountedPrice(200.0, 150.0);
+        System.assertEquals(-100.0, result, 'The discounted is more then 100% so 0 plus less money');
+    }
+    @IsTest
+    static void testCalculateOriginalPrice0(){
+        //original price is 0
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        Decimal result = myClass.calculateDiscountedPrice(0.0, 10.0);
+        System.assertEquals(00.0, result, 'original price is 0 so no discount ');
+    }
+
+
     @IsTest
     static void testDebugVars(){
         MyFirstApexClass myClass = new MyFirstApexClass();
