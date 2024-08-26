@@ -17,6 +17,12 @@ public with sharing class MyFirstApexClass {
         Decimal finalPrize = originalPrice - discountValue;
         return finalPrize;
     }
+    public void debugVars(){
+        System.debug('total sales is '+totalSales);
+        System.debug('today is '+todayDate);
+        System.debug('are you eligible ? '+isEligible);
+    }
+
 
 
 
