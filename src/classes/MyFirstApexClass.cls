@@ -23,7 +23,4 @@ public with sharing class MyFirstApexClass {
         System.debug('are you eligible ? '+isEligible);
     }
 
-
-
-
 }
