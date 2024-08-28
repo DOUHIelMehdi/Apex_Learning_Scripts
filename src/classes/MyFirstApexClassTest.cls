@@ -7,6 +7,8 @@ key concept :
 *"Objects created in a test method are destroyed after the test completes, ensuring that no data persists between tests."
 *"Test methods usually have a void return type because they are meant to validate code behavior through assertions, not return values."
 *"Code coverage measures execution, not correctness."
+*"test methods are static to ensure isolation and efficiency during testing"
+*"test classes are generally private to maintain encapsulation and adhere to best practices in code design"
 */
 
 
@@ -60,8 +62,39 @@ private class MyFirstApexClassTest {
         Decimal result = myClass.calculateDiscountedPrice(0.0, 10.0);
         System.assertEquals(00.0, result, 'original price is 0 so no discount ');
     }
+//categorie sales method test
+    @IsTest
+    static void testCategorySales0(){
+        //value 0
+    MyFirstApexClass myClass = new MyFirstApexClass();
+    String stateReturn = myClass.categorizeSales(0);
+     System.assertEquals('Low',stateReturn,'sales is low');
+    }
+    @IsTest
+    static void testCategorySalesNegative(){
+        //value negative
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        String stateReturn = myClass.categorizeSales(-10);
+        System.assertEquals('error',stateReturn,'sales number should be positive');
+    }
+    @IsTest
+    static void testCategorySalesBigger(){
+        //value >150
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        String stateReturn = myClass.categorizeSales(250);
+        System.assertEquals('High',stateReturn,'sales category is High');
+    }
+    @IsTest
+    static void testCategorySalesbetween50And150(){
+        //value >150
+        MyFirstApexClass myClass = new MyFirstApexClass();
+        String stateReturn = myClass.categorizeSales(75);
+        System.assertEquals('Medium',stateReturn,'sales category is Medium');
+    }
 
 
+
+//debugvars method test
     @IsTest
     static void testDebugVars(){
         MyFirstApexClass myClass = new MyFirstApexClass();

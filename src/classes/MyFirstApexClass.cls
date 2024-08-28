@@ -17,6 +17,24 @@ public with sharing class MyFirstApexClass {
         Decimal finalPrize = originalPrice - discountValue;
         return finalPrize;
     }
+
+    public String categorizeSales(Integer totalesSalesVerif){
+        String state ;
+        if(totalesSalesVerif <0){
+            state = 'error';
+        }
+        else if(totalesSalesVerif <= 50){
+            state = 'Low';
+        }
+        else if(totalesSalesVerif >50 && totalesSalesVerif <=150)
+        {
+            state = 'Medium';
+        }
+        else {state = 'High';}
+        System.debug('total sales is '+state);
+        return state;
+    }
+
     public void debugVars(){
         System.debug('total sales is '+totalSales);
         System.debug('today is '+todayDate);

@@ -2,18 +2,24 @@ o	Common conversions in apex
 
 	String to Integer :
 String myString = '123';		 Integer myInt = Integer.valueOf(myString);
+
 	String to Double :
 String myString = '99.99'; 	Double myDouble = Double.valueOf(myString);
+
 	String to Decimal :
 String myString = '99.99'; 	Decimal myDecimal = Decimal.valueOf(myString);
+
 	String to Date :
 String dateString = '2024-08-26'; 	Date myDate = Date.valueOf(dateString);
 
 	Integer to String :
+
 Integer myInt = 100; 		String myString = String.valueOf(myInt);
 	Double to integer :
+
 Double myDouble = 99.99; 	Integer myInt = myDouble.intValue(); // Converts to 99
 	Decimal to Double :
+
 Decimal myDecimal = 123.45;	 Double myDouble = myDecimal.doubleValue();
 
 	Boolean to String :
