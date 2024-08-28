@@ -91,7 +91,7 @@ private class MyFirstApexClassTest {
         String stateReturn = myClass.categorizeSales(75);
         System.assertEquals('Medium',stateReturn,'sales category is Medium');
     }
-
+//
 
 
 //debugvars method test
