@@ -91,7 +91,41 @@ private class MyFirstApexClassTest {
         String stateReturn = myClass.categorizeSales(75);
         System.assertEquals('Medium',stateReturn,'sales category is Medium');
     }
-//
+// loop lessons test methods
+    // for loop
+    @IsTest
+    static void testLoopMethod(){
+        LoopLessonRefe myFor = new LoopLessonRefe();
+        Integer sum =  myFor.calculateSum(5);
+        System.assertEquals(15,sum,'la somme doit etre 15');
+    }
+    //while
+    //case 1 : correct input correct output
+    @IsTest
+    static void testWhileLoop(){
+        LoopLessonRefe myWhile = new LoopLessonRefe();
+        Integer sum = myWhile.findFirstMultiple(8,4);
+        System.assertEquals(8,sum,'the first multiplier for 4 is 8 cause 8%4=0');
+    }
+    //case 2 : need to increment 10 to 12
+    @IsTest
+    static void testWhileLoopIncrement(){
+        LoopLessonRefe mywhile = new LoopLessonRefe();
+        Integer sum = mywhile.findFirstMultiple(10,4);
+        System.assertEquals(12,sum,'10%4 !=0 need to increment to 12');
+    }
+    /*
+    * other possible cases to do :
+    *   case 3 : increment number == conditionnumber (5,5)
+    *   case 4 : large number (100,30)=>120
+    *   case 5 : conditionnumber > increment number (5,10)
+    *   case 6 : conditionN Large (15,100)
+    *   case 7  : negative number ???
+    *   last case : conditionN = 1
+    * */
+
+
+
 
 
 //debugvars method test
