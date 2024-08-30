@@ -1,0 +1,83 @@
+Exercise 1: Revisiting Variable Types and Simple Calculations
+Objective: Create a class that contains instance variables of different types (Integer, Double, String).
+Write a method to concatenate the string representation of these variables into a single string.
+Use Case:
+•	Entry: Imagine you’re building a system that needs to display a summary of different attributes of a product,
+like an ID, price, and name.
+•	Output: The method should return a single string combining the ID, price, and name.
+Example:
+•	Input: ID = 101, Price = 29.99, Name = "Widget"
+•	Output: "Product 101 costs 29.99 and is named Widget"
+Test Cases:
+1.	Input: ID = 0, Price = 0.0, Name = "Test"
+o	Output: "Product 0 costs 0.0 and is named Test"
+2.	Input: ID = 999, Price = 150.50, Name = "Gadget"
+o	Output: "Product 999 costs 150.5 and is named Gadget"
+3.	Input: ID = 42, Price = 3.14, Name = "Pi"
+o	Output: "Product 42 costs 3.14 and is named Pi"
+________________________________________
+Exercise 2: Conditional Logic and Method Interaction
+Objective: Create a class with a method that checks whether an instance variable is above a certain threshold. If it is, the method should call another method to double the value of that variable.
+Use Case:
+•	Entry: Consider a situation where you're managing discounts. If a discount percentage exceeds 50%, it needs to be doubled for a special promotion.
+•	Output: The method should return the new discount value.
+Example:
+•	Input: Discount = 60%, Threshold = 50%
+•	Output: 120%
+Test Cases:
+1.	Input: Discount = 30%, Threshold = 50%
+o	Output: 30% (No change since the discount is below the threshold)
+2.	Input: Discount = 50%, Threshold = 50%
+o	Output: 50% (No change since the discount is exactly at the threshold)
+3.	Input: Discount = 75%, Threshold = 50%
+o	Output: 150% (Discount is doubled)
+________________________________________
+Exercise 3: Loops and Static Methods
+Objective: Write a class with a static method that returns the sum of all even numbers up to a given number. Then, write an instance method that calls this static method and subtracts the result from an instance variable.
+Use Case:
+•	Entry: Imagine you're developing a system that calculates bonuses. You need to sum certain values (like even numbers) and adjust the bonus amount accordingly.
+•	Output: The method should return the adjusted bonus after subtracting the sum of even numbers.
+Example:
+•	Input: Even Sum from 1 to 10 = 2 + 4 + 6 + 8 + 10 = 30, Bonus = 100
+•	Output: 70 (Bonus after subtracting even sum)
+Test Cases:
+1.	Input: Even Sum from 1 to 5, Bonus = 50
+o	Output: Bonus after subtracting = 40
+2.	Input: Even Sum from 1 to 20, Bonus = 150
+o	Output: Bonus after subtracting = 90
+3.	Input: Even Sum from 1 to 15, Bonus = 80
+o	Output: Bonus after subtracting = 50
+________________________________________
+Exercise 4: Error Handling and Complex Method Interaction
+Objective: Create a class with a method that calculates the factorial of a number but throws an error if the number is negative. Add a static method to validate inputs before the factorial calculation.
+Use Case:
+•	Entry: In scenarios where user input can be invalid, such as entering a negative number where only positives are valid, your system must handle errors gracefully.
+•	Output: The method should return the factorial of the number if it is valid, or an error message if it is not.
+Example:
+•	Input: Number = 5
+•	Output: Factorial = 120
+Test Cases:
+1.	Input: Number = 0
+o	Output: Factorial = 1
+2.	Input: Number = -3
+o	Output: Error: Negative numbers not allowed
+3.	Input: Number = 6
+o	Output: Factorial = 720
+________________________________________
+Exercise 5: Advanced Scope and Method Chaining
+Objective: Develop a complex class where an instance method updates an instance variable based on a calculation that involves calling other methods (both static and instance). Ensure that one method chains the result to another for further processing.
+Use Case:
+•	Entry: Consider a scenario where you’re managing financial transactions. A method calculates fees based on transaction amounts, which then needs to be processed further for tax calculations.
+•	Output: The method should return the final amount after fees and taxes have been calculated and applied.
+Example:
+•	Input: Transaction Amount = 1000, Fee = 5%, Tax = 10%
+•	Output: Final Amount = 850 (After applying fees and taxes)
+Test Cases:
+1.	Input: Transaction Amount = 500, Fee = 3%, Tax = 5%
+o	Output: Final Amount = 460
+2.	Input: Transaction Amount = 2000, Fee = 7%, Tax = 12%
+o	Output: Final Amount = 1620
+3.	Input: Transaction Amount = 1500, Fee = 4%, Tax = 8%
+o	Output: Final Amount = 1320
+
+
