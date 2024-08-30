@@ -5,7 +5,13 @@
 private class MethodSolutionExerciceTest {
     // Reusing instance across test methods
     private static final MethodSolutionExercise exercise = new MethodSolutionExercise();
+    /*
+    *          EXERCISE 1 : product summary string return
+    *          EXERCISE 2 : discount condition and doubling it over 50%
+    *
+    * */
 
+    /*     EXERCISE 1 : product summary string return      */
     @IsTest
     static void testPrintProductSummaryCase0() {
         // Test with id = 0, price = 0.0, name = 'Test'
@@ -41,4 +47,25 @@ private class MethodSolutionExerciceTest {
         String result = exercise.getProductSummary(42, 3.14, 'Pi');
         System.assertEquals('Product = 42 ,Price = 3.14 ,Name =Pi', result);
     }
+    /*     EXERCISE 2 : discount condition and doubling it over 50%     */
+    @IsTest
+    static void checkDiscountOrDoubleItTest30(){
+        String verification =exercise.checkDiscountOrDoubleIt(30);
+        System.assertEquals(' 30% (No change since the discount is below the threshold)',verification,'no discount');
+    }
+    @IsTest
+    static void checkDiscountOrDoubleItTest50(){
+        String verification =exercise.checkDiscountOrDoubleIt(50);
+        System.assertEquals('50% (No change since the discount is exactly at the threshold)',verification,'no discount');
+    }
+    @IsTest
+    static void checkDiscountOrDoubleItTest75(){
+        String verification =exercise.checkDiscountOrDoubleIt(75);
+        System.assertEquals('150% (Discount is doubled)',verification,'discount approved');
+    }
+
+
+
+
+
 }

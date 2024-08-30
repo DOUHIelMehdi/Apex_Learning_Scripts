@@ -3,7 +3,7 @@
  */
 public with sharing class MethodSolutionExercise {
 
-    /*     EXERCISE 1     */
+    /*     EXERCISE 1 : product summary string return      */
     // Method 1: Print the product summary
     public void printProductSummary(Integer idProduct, Decimal price, String productName) {
         System.debug('Product = ' + idProduct + ' ,Price = ' + price + ' ,Name = ' + productName);
@@ -16,8 +16,22 @@ public with sharing class MethodSolutionExercise {
         return command;
     }
 
-    /*     EXERCISE 2     */
-    // Placeholder for Exercise 2
+    /*     EXERCISE 2 : discount condition and doubling it over 50%     */
+
+    public String checkDiscountOrDoubleIt(Integer discountPercentage){
+        String msg ='';
+        if(discountPercentage <0){
+            msg ='discount can not be a negative percentage';
+       }
+        else if(discountPercentage <50 ){
+            msg = discountPercentage+'% (No change since the discount is below the threshold)';
+        }
+        else if(discountPercentage == 50 ){
+            msg = discountPercentage+'% (No change since the discount is exactly at the threshold)';
+        }
+        else {msg = (discountPercentage *2)+'% Discount is doubled';}
+        return msg;
+    }
 
     /*     EXERCISE 3     */
     // Placeholder for Exercise 3
