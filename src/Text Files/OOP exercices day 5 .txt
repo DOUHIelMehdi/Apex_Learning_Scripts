@@ -1,0 +1,69 @@
+Exercise 1: Defining and Using a Class              DONE
+Objective: Create a class that represents a Book with attributes like title, author, and yearPublished. Write a method within the class to display the book’s details.
+
+Use Case: Imagine you are building a library management system in Salesforce. You need to track books and their details.
+
+Test Cases:
+
+Input: title = "Apex Basics", author = "John Doe", yearPublished = 2023
+Expected Output: "Book: Apex Basics, Author: John Doe, Year: 2023"
+Input: title = "Salesforce Guide", author = "Jane Smith", yearPublished = 2021
+Expected Output: "Book: Salesforce Guide, Author: Jane Smith, Year: 2021"
+Input: title = "Coding 101", author = "Alex Roe", yearPublished = 2020
+Expected Output: "Book: Coding 101, Author: Alex Roe, Year: 2020"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercise 2: Working with Instance Methods               DONE
+Objective: Extend the Book class to include an instance method that checks if the book was published in the last 5 years.
+
+Use Case: In your library management system, you need to identify recent books for a "New Arrivals" section.
+
+Test Cases:
+
+Input: yearPublished = 2023
+Expected Output: true (since 2023 is within the last 5 years)
+Input: yearPublished = 2018
+Expected Output: true (since 2018 is within the last 5 years)
+Input: yearPublished = 2016
+Expected Output: false (since 2016 is not within the last 5 years)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercise 3: Encapsulation with Private Variables
+Objective: Modify the Book class to make the yearPublished attribute private. Provide public getter and setter methods to access and modify this attribute.
+
+Use Case: In your system, you want to protect the yearPublished attribute from being directly accessed or modified, ensuring only controlled updates.
+
+Test Cases:
+
+Input: Use the setter to change yearPublished to 2025.
+Expected Output: The getter should return 2025.
+Input: Attempt to directly modify yearPublished.
+Expected Output: Compilation error (since yearPublished is private).
+Input: Use the getter to retrieve yearPublished after setting it to 2019.
+Expected Output: 2019
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercise 4: Creating and Using Multiple Objects
+Objective: Create a class Library that contains a list of Book objects. Write a method to add a new Book to the library and another method to list all books in the library.
+
+Use Case: You need to manage a collection of books in your library system, allowing users to add new books and view the entire collection.
+
+Test Cases:
+
+Input: Add 3 books (Book1, Book2, Book3) to the library.
+Expected Output: List all books with their details.
+Input: Add a book and then remove it from the list.
+Expected Output: The book should no longer be listed.
+Input: Attempt to add a duplicate book.
+Expected Output: The book should be added if no duplication checks are implemented.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exercise 5: Method Interaction and Data Processing
+Objective: Create a method in the Library class that calculates the total number of books published in a specific year.
+
+Use Case: In your library system, you might need to generate statistics, such as the number of books published in a certain year.
+
+Test Cases:
+
+Input: Calculate the number of books published in 2022 with 2 matching books.
+Expected Output: 2
+Input: Calculate the number of books published in 2023 with no matching books.
+Expected Output: 0
+Input: Calculate the number of books published in 2020 with 1 matching book.
+Expected Output: 1
